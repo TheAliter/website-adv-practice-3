@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Exo');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Exo', sans-serif;
+  font-size: 62.5%;
+}
+
+header {
+  background: url(../images/bg.jpg);
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.logo h1 {
+  display: inline-block;
+  float: right;
+  color: #fff;
+  font-weight: 100;
+  font-size: 4rem;
+  border-bottom: 1px solid #00ff00;
+  line-height: 1;
+}
+
+.logo h1 span {
+  color: #00ff00;
+}
+
+.login {
+  display: grid;
+  grid-gap: 0.5rem;
+}
+
+.login input {
+  margin-left: 2rem;
+  height: 4rem;
+  width: 20rem;
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 0.2rem 0.4rem;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.login input:focus {
+  outline: none;
+}
+
+.login input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.login input[type="button"] {
+  color: #1a1a1a;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.login input[type="text"], .login input[type="password"]  {
+  color: #fff;
+}
+
+.login input[type="button"]:hover {
+  color: #000;
+  background: #fff;
+}
+
+.login p {
+  color: #ff0000;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  animation: show 1s;
+  text-decoration: underline;
+  background: rgba(0, 0, 0, 0.5);
+  width: 20rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media screen and (max-width: 31.25em) {
+  #login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  #login h1 {
+    float: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+  .login input {
+    margin: 0 auto 1rem;
+  }
+  .login p {
+    margin: -1rem 0 0;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.25;
+    transform: translateY(4rem);
+  }
+  50% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
